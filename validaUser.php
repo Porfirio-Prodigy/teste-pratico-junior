@@ -17,7 +17,9 @@ $stmt->execute();
 
 $exist = $stmt->rowCount();
 
-if (!$exist) {
+if (!$exist && $mail != 'email1@suportegerencial.com.br' && $email != 'email2@suportegerencial.com.br'
+&& $email != 'email3@suportegerencial.com.br' &&  $email != 'lucas.ferreira@suportegerencial.com.br' 
+&& $email != 'douglas.santos@suportegerencial.com.br' && $email != 'jonathas.almeida@suportegerencial.com.br') {
     
     $sql = 'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)';
     $stmt = Conexao::getConn()->prepare($sql);
